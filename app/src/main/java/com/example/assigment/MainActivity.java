@@ -17,9 +17,9 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
     Spinner spinner1, spinner2, spinner3, spinner4;
-    int Spinner1 = 0, Spinner2 = 0,Spinner3,Spinner4;
+    int Spinner1 = 0, Spinner2 = 0, Spinner3, Spinner4;
     private Button btnCalculated;
-    private TextView tvResult,tvResult2;
+    private TextView tvResult, tvResult2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         spinner2.setAdapter(adapter);
         spinner3.setAdapter(adapter);
         spinner4.setAdapter(adapter1);
-
 
 
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Spinner4= Integer.parseInt(parent.getItemAtPosition(position).toString().trim());
+                Spinner4 = Integer.parseInt(parent.getItemAtPosition(position).toString().trim());
             }
 
             @Override
@@ -92,19 +91,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        btnCalculated.setOnClickListener(v->{
-            int Result=Spinner1+Spinner2;
-            if(Spinner4==0)
-            {   tvResult.setText(""+Result);
+        btnCalculated.setOnClickListener(v -> {
+            int Result = Spinner1 + Spinner2;
+            if (Spinner4 == 0) {
+                tvResult.setText("" + Result);
                 tvResult2.setText("infinity");
-            }
-            else {
-                double result=Spinner3/Spinner4;
+            } else {
+                double result = (double) Spinner3 / Spinner4;
                 DecimalFormat decimalFormat = new DecimalFormat("#0.00");
                 // Create a DecimalFormat object with 2 decimal places
                 String formattedValue = decimalFormat.format(result);
-                tvResult.setText(""+Result);
-                tvResult2.setText(""+formattedValue);
+                tvResult.setText("" + Result);
+                tvResult2.setText("" + formattedValue);
 
             }
 

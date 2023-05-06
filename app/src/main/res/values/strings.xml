@@ -1,18 +1,16 @@
 <resources>
     <string name="app_name">Assignment 1</string>
     <string-array name="numbers">
-        <item>0</item>
         <item>50</item>
         <item>100</item>
         <item>200</item>
         <item>300</item>
-        <item>400</item>
     </string-array>
     <string-array name="numbers1">
-        <item>0</item>
-        <item>002</item>
+        <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>0</item>
     </string-array>
 </resources>

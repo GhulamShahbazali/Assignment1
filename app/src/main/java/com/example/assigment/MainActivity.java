@@ -13,6 +13,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.myassigment.R;
+
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {

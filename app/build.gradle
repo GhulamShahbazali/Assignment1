@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.assigment'
+    namespace 'com.example.myassigment'
     compileSdk 33
 
     defaultConfig {
